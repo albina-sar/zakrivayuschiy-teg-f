@@ -1,0 +1,8 @@
+{
+    "": {
+        "\"*.svg\"": "default"
+    },
+    "workbench.editorAssociations": {
+        "*.svg": "default"
+    }
+}
