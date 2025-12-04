@@ -6,6 +6,7 @@
     --text-font-weight: 410;
     --inline-size: clamp(375px, 100vw, 700px);
     --font-size-card: 18px;
+    --font-size-text: 14px;
     --text-color: #000000;
     --stroke-color: #ffffff;
     --contour-color: #000000;

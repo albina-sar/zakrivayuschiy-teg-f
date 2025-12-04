@@ -44,14 +44,12 @@
 .logo {
   grid-row: 2;
   font-family: var(--accent-font-family), monospace;
-  font-weight: 400;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 .title {
   grid-row: 3;
   font-family: var(--accent-font-family), monospace;
-  font-weight: 400;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
   justify-self: center;
@@ -127,8 +125,7 @@
   opacity: 0.5;
   mix-blend-mode: hard-light;
   font-family: var(--accent-font-family), monospace;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--font-size-text);
   color: var(--text-color);
   text-shadow: -1px -1px 0 var(--stroke-color), 1px -1px 0 var(--stroke-color),
     -1px 1px 0 var(--stroke-color), 1px 1px 0 var(--stroke-color);
@@ -281,13 +278,17 @@
 
 .button__text {
   font-family: var(--accent-font-family), monospace;
-  font-size: 14px;
+  font-size: var(--font-size-text);
+  position: relative;
+  z-index: 2;
+  color: var(--button-text-color, white);
+  mix-blend-mode: difference;
 }
 
 .modal {
   position: fixed;
   font-family: var(--accent-font-family);
-  font-size: 14px;
+  font-size: var(--font-size-text);
   line-height: 150%;
   text-transform: uppercase;
 }
@@ -366,13 +367,6 @@
 .modal_button:hover::before {
   transform: scaleX(1);
   cursor: pointer;
-}
-
-.button__text {
-  position: relative;
-  z-index: 2;
-  color: var(--button-text-color, white);
-  mix-blend-mode: difference;
 }
 
 @media (width <= 376px) {
