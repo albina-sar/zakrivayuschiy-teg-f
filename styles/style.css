@@ -48,7 +48,6 @@
   display: grid;
   grid-template-rows: repeat(3, auto);
   background-color: white;
-  border: 1px solid black;
   position: relative;
   margin-bottom: 54px;
   width: 100%;
