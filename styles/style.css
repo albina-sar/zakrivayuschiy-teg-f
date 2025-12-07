@@ -117,14 +117,14 @@
   font-family: var(--accent-font-family), fantasy;
   font-size: var(--font-size-text);
   color: var(--text-color);
-  text-shadow:
-    -1px -1px 0 var(--stroke-color),
-    1px -1px 0 var(--stroke-color),
-    -1px 1px 0 var(--stroke-color),
-    1px 1px 0 var(--stroke-color);
+  text-shadow: -1px -1px 0 var(--stroke-color), 1px -1px 0 var(--stroke-color),
+    -1px 1px 0 var(--stroke-color), 1px 1px 0 var(--stroke-color);
 }
 
-@supports ((text-stroke: 1px var(--stroke-color)) or (-webkit-text-stroke: 1px var(--stroke-color))) {
+@supports (
+  (text-stroke: 1px var(--stroke-color)) or
+    (-webkit-text-stroke: 1px var(--stroke-color))
+) {
   .label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--stroke-color);
@@ -181,6 +181,7 @@
 .card__icon-button:focus-visible {
   border: 2px solid var(--text-color);
   border-radius: 0;
+  outline: none;
 }
 
 .card__icon-button:hover {
@@ -210,6 +211,10 @@
   z-index: 2;
   color: var(--button-text-color, white);
   mix-blend-mode: difference;
+}
+
+.save-button:hover .floppy-icon-small {
+  filter: invert(1);
 }
 
 .modal {
@@ -249,6 +254,7 @@
   width: 21px;
   height: 21px;
   flex-shrink: 0;
+  z-index: 2;
 }
 
 .floppy-icon-large {
