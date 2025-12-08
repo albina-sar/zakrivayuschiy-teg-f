@@ -213,10 +213,6 @@
   mix-blend-mode: difference;
 }
 
-.save-button:hover .floppy-icon-small {
-  filter: invert(1);
-}
-
 .modal {
   position: fixed;
   font-family: var(--accent-font-family), fantasy;
@@ -255,6 +251,8 @@
   height: 21px;
   flex-shrink: 0;
   z-index: 2;
+  color: var(--stroke-color);
+  mix-blend-mode: difference;
 }
 
 .floppy-icon-large {
